@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+body{
+    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(imagens/bigstock-omni-channel-technology.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   text-decoration: none;
+    
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 900px;
+    height: 550px;
+    background-image: url(imagens/bigstock-omni-channel-technology.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter:grayscale(0.3);
+    transition: 0.3s;
+    
+    color: aliceblue;
+    padding-top: 1px;
+        padding-right: 6px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        margin: 15px;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.76);
+        border-radius: 5px;
+}
+
+.card-content{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+.card-content::before{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    display: block;
+    border: 2px solid white;
+    opacity: 0;
+    transition: 0.3s;
+    padding-top: 10px;
+    width: 900px;
+    height: 500px;
+    
+
+}  
+
+.card-content h2 {
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin: 0;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+
+}
+.card-content p{
+    font-size: 27px;
+    font-weight: bolder;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    visibility: hidden;
+    opacity: 0;
+    position:relative;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+     
+} 
+.card-content h5{
+
+    font-size: 19px;
+    font-weight: bolder;
+    transition: 1s;
+    letter-spacing: 1px;
+    visibility: hidden;
+    opacity: 0;
+    text-decoration: none;
+    color: aliceblue;
+    position:relative;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.card:hover{
+    filter: unset ;
+    position:relative;
+    width: 1000px;
+    height: 600px;
+        
+}
+
+.card:hover > .card-content::before{
+    
+    opacity: 1;
+    width: 800px;
+    height: 400px;
+     
+}
+.card:hover > .card-content p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 29px;
+
+}
+
+.card:hover > .card-content h5 {
+    opacity: 1;
+    visibility: visible;
+    font-size: 19px;
+    
+}
